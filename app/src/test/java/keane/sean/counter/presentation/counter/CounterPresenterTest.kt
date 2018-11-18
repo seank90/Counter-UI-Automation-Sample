@@ -9,9 +9,9 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner::class)
 class CounterPresenterTest {
 
-    private val view: CounterViewMVP.View = mock()
+    private val view: CounterMVP.View = mock()
 
-    private val counterPresenter: CounterViewMVP.Presenter = CounterPresenter(view)
+    private val counterPresenter: CounterMVP.Presenter = CounterPresenter(view)
 
     /**
      * Given:   A user has freshly started the app

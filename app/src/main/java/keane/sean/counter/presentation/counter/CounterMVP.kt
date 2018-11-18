@@ -1,6 +1,6 @@
 package keane.sean.counter.presentation.counter
 
-interface CounterViewMVP {
+interface CounterMVP {
 
     interface Presenter {
 

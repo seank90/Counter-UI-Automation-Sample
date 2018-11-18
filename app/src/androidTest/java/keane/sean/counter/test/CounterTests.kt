@@ -21,7 +21,7 @@ class CounterTests {
      * Then:    The value should increment by 1
      **/
     @Test
-    fun counterValueIncrementsByOneWhenPressedOnce() {
+    fun counterValueIncrementsByOneWhenPlusPressedOnce() {
         counter {
             pressPlus()
         } result {
@@ -29,4 +29,58 @@ class CounterTests {
         }
     }
 
+    /**
+     * Given:   A user has pressed the minus button
+     * When:    The value was originally 0
+     * Then:    The value should decrement by 1
+     **/
+    @Test
+    fun counterValueDecrementsByOneWhenMinusPressedOnce() {
+        counter {
+            pressMinus()
+        } result {
+            isTheCountEqualTo(-1)
+        }
+    }
+
+    /**
+     * Given:   A user has pressed the plus button 5 times
+     * When:    The value was originally 0
+     * Then:    The value should increment by 5
+     **/
+    @Test
+    fun counterValueIncrementsByFiveWhenPlusPressedFiveTimes() {
+        counter {
+            pressPlusThisManyPresses(5)
+        } result {
+            isTheCountEqualTo(5)
+        }
+    }
+
+    /**
+     * Given:   A user has pressed the minus button 5 times
+     * When:    The value was originally 0
+     * Then:    The value should decrement by 5
+     **/
+    @Test
+    fun counterValueDecrementsByFiveWhenMinusPressedFiveTimes() {
+        counter {
+            pressMinusThisManyPresses(5)
+        } result {
+            isTheCountEqualTo(-5)
+        }
+    }
+
+    /**
+     * Given:   A user has just launched the app
+     * When:    The value set to be originally 0
+     * Then:    The value should be 0
+     **/
+    @Test
+    fun counterValueStartsAtZero() {
+        counter {
+        } result {
+            isTheCountEqualTo(0)
+        }
+    }
 }

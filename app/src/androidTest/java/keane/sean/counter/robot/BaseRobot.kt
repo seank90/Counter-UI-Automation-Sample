@@ -7,7 +7,7 @@ import android.support.test.espresso.assertion.ViewAssertions
 import android.support.test.espresso.matcher.ViewMatchers
 import android.support.test.espresso.matcher.ViewMatchers.withId
 
-open class BaseTestRobot {
+abstract class BaseTestRobot {
 
     fun clickButton(resId: Int): ViewInteraction = onView((withId(resId))).perform(ViewActions.click())
 
