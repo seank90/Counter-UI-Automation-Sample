@@ -9,9 +9,10 @@ import kotlinx.android.synthetic.main.view_counter.view.*
 class CounterView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0): ConstraintLayout(context, attrs, defStyleAttr), CounterViewMVP.View {
+    defStyleAttr: Int = 0
+) : ConstraintLayout(context, attrs, defStyleAttr), CounterMVP.View {
 
-    private val presenter: CounterViewMVP.Presenter by lazy { CounterPresenter(this) }
+    private val presenter: CounterMVP.Presenter by lazy { CounterPresenter(this) }
 
     init {
         inflate(context, R.layout.view_counter, this)

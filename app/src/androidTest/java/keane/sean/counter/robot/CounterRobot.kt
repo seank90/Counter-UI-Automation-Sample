@@ -15,13 +15,13 @@ class CounterRobot : BaseTestRobot() {
     }
 
     fun pressPlusThisManyPresses(presses: Int) {
-        for (i in presses downTo 0) {
+        for (i in presses downTo 1) {
             pressPlus()
         }
     }
 
     fun pressMinusThisManyPresses(presses: Int) {
-        for (i in presses downTo 0) {
+        for (i in presses downTo 1) {
             pressMinus()
         }
     }

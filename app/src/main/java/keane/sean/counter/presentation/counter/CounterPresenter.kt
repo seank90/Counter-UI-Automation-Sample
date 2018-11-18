@@ -2,8 +2,7 @@ package keane.sean.counter.presentation.counter
 
 import keane.sean.counter.presentation.common.BasePresenter
 
-class CounterPresenter(counterView: CounterViewMVP.View)
-    : BasePresenter<CounterViewMVP.View>(), CounterViewMVP.Presenter {
+class CounterPresenter(counterView: CounterMVP.View) : BasePresenter<CounterMVP.View>(), CounterMVP.Presenter {
 
     private var currentCount = 0
 
